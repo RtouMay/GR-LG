@@ -14,6 +14,46 @@
 <body>
   <!-- پس‌زمینه سه‌بعدی -->
   <canvas id="bg3d"></canvas>
+  <!-- Canvas بازی سه‌بعدی (روی منو میاد وقتی بازی شروع میشه) -->
+<canvas id="game3d"></canvas>
+
+<!-- UI بازی -->
+<div id="gameUI" class="gameUI hidden" aria-hidden="true">
+  <div class="hud">
+    <div class="hudPill"><span>TIME</span><b id="hudTime">45</b></div>
+    <div class="hudPill"><span>SCORE</span><b id="hudScore">0</b></div>
+    <div class="hudPill"><span>BEST</span><b id="hudBest">0</b></div>
+  </div>
+
+  <!-- کنترل موبایل: دو ناحیه لمس -->
+  <div class="touchZones" aria-hidden="true">
+    <div class="zone left" id="zoneLeft"></div>
+    <div class="zone right" id="zoneRight"></div>
+  </div>
+
+  <!-- پیام‌های وسط صفحه -->
+  <div class="centerToast" id="centerToast">Get Ready…</div>
+
+  <!-- پنجره پایان بازی -->
+  <div class="endModal hidden" id="endModal" role="dialog" aria-modal="true">
+    <div class="endCard">
+      <div class="endTitle">🏁 Game Over</div>
+      <div class="endStats">
+        <div class="stat"><span>Score</span><b id="endScore">0</b></div>
+        <div class="stat"><span>Best</span><b id="endBest">0</b></div>
+      </div>
+      <div class="endBtns">
+        <button class="ghostBtn" id="btnBackToLeague" type="button">Back to League</button>
+        <button class="startBtn" id="btnPlayAgain" type="button">
+          <span class="startBtn__shine" aria-hidden="true"></span>
+          <span class="startBtn__text">Play Again</span>
+          <span class="startBtn__sub">One more run</span>
+        </button>
+      </div>
+      <div class="endHint">کنترل: ← → یا لمس چپ/راست</div>
+    </div>
+  </div>
+</div>
 
   <!-- لایه نور و افکت -->
   <div class="fx-scanlines" aria-hidden="true"></div>
